@@ -39,7 +39,7 @@ for f = 1:zz
 
 filename = all_files(f);
 filename =filename{1};
-inputfile = filename
+inputfile = filename;
 
 % *************************************************************************
 shape = 'circle';
@@ -93,7 +93,6 @@ posts = PosMtx(:,1);
 posgx = PosMtx(:,2);
 posgy = PosMtx(:,3);
 [posgx,posgy] = smooth_path(posgx,posgy);
-posts = PosMtx(:,1);
 posrx = PosMtx(:,4);
 posry = PosMtx(:,5);
 [posrx,posry] = smooth_path(posrx,posry);
@@ -275,7 +274,6 @@ set(gca,'DataAspectRatio',[1 1 1],'PlotBoxAspectRatio',[1 1 1]);
 axis off
 box off
 
-posts = PosMtx(:,1);
 posgx = PosMtx(:,2);
 posgy = PosMtx(:,3);
 [posgx,posgy] = smooth_path(posgx,posgy);
