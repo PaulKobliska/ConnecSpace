@@ -31,7 +31,7 @@ zz = size (all_files,1);
 a=dir;  % Prendre tous les doc du fichier dans a
 b=struct2table(a);  % convertir a en table
 folder_name=b.name; % prendre seulement la colone "nom" des documents
-folder_name(1:2)=[];    % enlever les 2 premières lignes de noms car elles sont vides
+folder_name(1:2)=[];    % enlever les 2 premiÃ¨res lignes de noms car elles sont vides
 
 %define paramaters:
 binWidth = 3;     % bining for ratemaps
@@ -609,7 +609,7 @@ visited_comp1 = visitedBins(posrx_comp1,posry_comp1,mapAxis_comp1); % calculate 
 [ratemap_comp1] = ratemap_gaussian(2*binWidth,spkx_comp1,spky_comp1,posrx_comp1,posry_comp1,posts(left),binWidth,mapAxis_comp1); % build matrix ratemap 
 ratemap_comp1(visited_comp1==0) = NaN;
 
-% ratemap comp 1 rotated by 180°
+% ratemap comp 1 rotated by 180Â°
 minus_posrx_comp1 = -(posrx_comp1);
 minus_posry_comp1 = -(posry_comp1);
 [minus_posrx_comp1,minus_posry_comp1] = center_path(minus_posrx_comp1,minus_posry_comp1,shape);
@@ -665,8 +665,8 @@ axis off
 box off
 title('rotated compartiment 1');
 subplot(2,2,4);
-text(0,1,strcat('corr 0° =',num2str (corrcoeff)),'FontSize', 30);
-text(0,0.5,strcat('corr 180° =',num2str (rotated_corrcoeff)),'FontSize', 30);
+text(0,1,strcat('corr 0Â° =',num2str (corrcoeff)),'FontSize', 30);
+text(0,0.5,strcat('corr 180Â° =',num2str (rotated_corrcoeff)),'FontSize', 30);
 axis off
 
 set(two_comp_corr,'units','normalized','outerposition',[0 0 1 1 ]);
@@ -1597,7 +1597,7 @@ ratemap_top_left2 = ratemap_top_left2(1:minLength,1:minLength); ratemap_down_lef
 
 meancorrcoef = mean([corrcoeff1,corrcoeff2,corrcoeff3,corrcoeff4,corrcoeff5,corrcoeff6]);
 
-%ratemp comp 2 rotated 90°
+%ratemp comp 2 rotated 90Â°
 [posrx_comp2,posry_comp2] = center_path(posry(bottomleft),posrx(bottomleft),shape);
 posry_comp2=-posry_comp2;
 [mapAxis_comp2] = mapaxis(posrx_comp2,posry_comp2,binWidth);
@@ -1607,7 +1607,7 @@ visited_comp2 = visitedBins(posrx_comp2,posry_comp2,mapAxis_comp2); % calculate 
 ratemap_comp2(visited_comp2==0) = NaN;
 ratemap_down_left_rotated = ratemap_comp2;
 
-%ratemp comp 3 rotated 180°
+%ratemp comp 3 rotated 180Â°
 [posrx_comp3,posry_comp3] = center_path(posrx(bottomright),posry(bottomright),shape);
 posrx_comp3=-posrx_comp3;posry_comp3=-posry_comp3;
 [mapAxis_comp3] = mapaxis(posrx_comp3,posry_comp3,binWidth);
@@ -1617,7 +1617,7 @@ visited_comp3 = visitedBins(posrx_comp3,posry_comp3,mapAxis_comp3); % calculate 
 ratemap_comp3(visited_comp3==0) = NaN;
 ratemap_down_right_rotated = ratemap_comp3;
 
-%ratemp comp 4 rotated -90°
+%ratemp comp 4 rotated -90Â°
 [posrx_comp4,posry_comp4] = center_path(posry(topright),posrx(topright),shape);
 posrx_comp4=-posrx_comp4;
 [mapAxis_comp4] = mapaxis(posrx_comp4,posry_comp4,binWidth);
