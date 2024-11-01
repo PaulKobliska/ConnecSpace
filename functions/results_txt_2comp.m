@@ -27,12 +27,6 @@ if exist(strcat(results_folder,'\two_comp_results.txt'))==2 %if the file exist,
        fprintf(fid,'%.4f\t',ret.slope);
        fprintf(fid,'%.4f\t',ret.intercept);
 
-       fprintf(fid,'%.4f\t',peak_frequency_theta);
-       fprintf(fid,'%.4f\t',theta_power);
-       fprintf(fid,'%.4f\t',delta_power);
-       fprintf(fid,'%.4f\t',sig_threshold);
-       fprintf(fid,'%.0f\t',theta_modulation);
-
        fprintf(fid,'%.4f\t',PFD_deg);
        fprintf(fid,'%.4f\t',Vector_length);
        fprintf(fid,'%.4f\t',peak_HD);
@@ -80,12 +74,6 @@ else fid=fopen(strcat(results_folder,'\two_comp_results.txt'),'w'); %if it does 
     fprintf(fid,'%s\t','slope speed correlation');
     fprintf(fid,'%s\t','intercept speed correlation');
 
-    fprintf(fid,'%s\t','peak theta freq');
-    fprintf(fid,'%s\t','power theta');
-    fprintf(fid,'%s\t','power delta');
-    fprintf(fid,'%s\t','significant threshold');
-    fprintf(fid,'%s\t','theta modulation (0:no 1:yes)');
-
    fprintf(fid,'%s\t','PFD global');
    fprintf(fid,'%s\t','Vector length global');
    fprintf(fid,'%s\t','Peak HD glbal');
@@ -124,11 +112,6 @@ else fid=fopen(strcat(results_folder,'\two_comp_results.txt'),'w'); %if it does 
        fprintf(fid,'%.4f\t',ret.p_value);
        fprintf(fid,'%.4f\t',ret.slope);
        fprintf(fid,'%.4f\t',ret.intercept);
-       fprintf(fid,'%.4f\t',peak_frequency_theta);
-       fprintf(fid,'%.4f\t',theta_power);
-       fprintf(fid,'%.4f\t',delta_power);
-       fprintf(fid,'%.4f\t',sig_threshold);
-       fprintf(fid,'%.0f\t',theta_modulation);
        fprintf(fid,'%.4f\t',PFD_deg);
        fprintf(fid,'%.4f\t',Vector_length);
        fprintf(fid,'%.4f\t',peak_HD);
