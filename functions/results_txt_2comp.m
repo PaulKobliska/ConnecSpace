@@ -3,7 +3,7 @@ function results_txt_2comp(results_folder,inputfile,p,i,peak_rate_global,peak_ra
     Vector_length_left,peak_HD_left,PFD_deg_right,Vector_length_right,peak_HD_right,...
     PFD_deg_door,Vector_length_door,peak_HD_door,Vector_length_double,flipping_score,...
     flipping_score_range,Vector_length_quadri,Four_dir_score,Four_dir_score_minmax,...
-    Four_dir_score_range,Four_dir_score_minmax_range,ret,number_of_corr_peaks)
+    Four_dir_score_range,Four_dir_score_minmax_range,number_of_corr_peaks)
 
 if exist(strcat(results_folder,'\two_comp_results.txt'))==2 %if the file exist, 
    % open the file (a=add)
@@ -20,11 +20,6 @@ if exist(strcat(results_folder,'\two_comp_results.txt'))==2 %if the file exist,
        fprintf(fid,'%.4f\t',peak_rate_door);
        fprintf(fid,'%.4f\t',corrcoeff);
        fprintf(fid,'%.4f\t',rotated_corrcoeff);
-
-       fprintf(fid,'%.4f\t',ret.r);
-       fprintf(fid,'%.4f\t',ret.p_value);
-       fprintf(fid,'%.4f\t',ret.slope);
-       fprintf(fid,'%.4f\t',ret.intercept);
 
        fprintf(fid,'%.4f\t',PFD_deg);
        fprintf(fid,'%.4f\t',Vector_length);
@@ -107,10 +102,6 @@ else fid=fopen(strcat(results_folder,'\two_comp_results.txt'),'w'); %if it does 
        fprintf(fid,'%.4f\t',peak_rate_door);
        fprintf(fid,'%.4f\t',corrcoeff);
        fprintf(fid,'%.4f\t',rotated_corrcoeff);
-       fprintf(fid,'%.4f\t',ret.r);
-       fprintf(fid,'%.4f\t',ret.p_value);
-       fprintf(fid,'%.4f\t',ret.slope);
-       fprintf(fid,'%.4f\t',ret.intercept);
        fprintf(fid,'%.4f\t',PFD_deg);
        fprintf(fid,'%.4f\t',Vector_length);
        fprintf(fid,'%.4f\t',peak_HD);
