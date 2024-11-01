@@ -11,7 +11,6 @@
 cd '';
 pathfigure = ''; % enter folder to save figure (finish the path with\)
 results_folder = ''; % enter folder to save data
-mat_folder = ''; % enter folder with mat files
 
 a= dir;
 b= struct2table(a);
