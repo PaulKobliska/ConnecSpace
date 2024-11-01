@@ -53,7 +53,7 @@ close
 
 TTMtx=TTMtx2;
 tetrode = unique(TTMtx(:,2));    
-    for pp = 2%:length(tetrode)
+    for pp = 1:length(tetrode)
         TTMtx2=TTMtx(TTMtx(:,2)== tetrode(pp),:);
         TTMtx2(TTMtx2(:,3)==0,:) = [];
         if isempty(TTMtx2)
