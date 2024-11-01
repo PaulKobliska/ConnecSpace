@@ -2,7 +2,7 @@
 % *************************************************************************
 % script to analyze 2 and 4 compartments HD activities
 % handmade script for 2019 M2 internship
-% made by P-Yves 15/03/2019
+% corrections made by P-Yves 15/03/2019
 %modification made by Celia 05/01/2021
 %modification made by Célia 05/09/2022 : change selection of compartments and
 %door by crating polygon with mouse clics.
@@ -53,7 +53,7 @@ close
 
 TTMtx=TTMtx2;
 tetrode = unique(TTMtx(:,2));    
-    for pp = 2%:length(tetrode)
+    for pp = 1:length(tetrode)
         TTMtx2=TTMtx(TTMtx(:,2)== tetrode(pp),:);
         TTMtx2(TTMtx2(:,3)==0,:) = [];
         if isempty(TTMtx2)
