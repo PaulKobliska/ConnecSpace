@@ -1,3 +1,4 @@
+
 % *************************************************************************
 % script to analyze 2 and 4 compartments HD activities
 % handmade script for 2019 M2 internship
@@ -306,17 +307,6 @@ get(gca,'ticklength');
 set(gca,'TickLength',[0.03,0.02]);
 set(gca,'TickDir','out');
 title('Autocorrelogram','fontsize',12);
-
-subplot(2,3,6);
-[mean_freq,freq_peak_distr,peak_theta,peak_delta] = intrinsicfiring(TimeWindow,Tbin,autocorr,y);
-title(strcat('Peak theta=',num2str(sprintf('%.2f', freq_peak_distr),'Hz')),'fontsize',12);
-[peak_frequency_theta,theta_power,delta_power,sig_threshold,theta_modulation] = theta_delta(TimeWindow,Tbin,ts);
-set(gca,'TickDir','out','Box','off');
-h=get(gcf, 'currentaxes');
-set(h, 'fontsize', 12, 'linewidth', 2);
-set(gca,'TickLength',[0.02,0.01]);
-title(strcat('Peak theta=',num2str(sprintf('%.2f', freq_peak_distr),'Hz')),'fontsize',12);
-
 
 %% save general figures 
 set(general_fig,'units','normalized','outerposition',[0 0 1 1 ]);
